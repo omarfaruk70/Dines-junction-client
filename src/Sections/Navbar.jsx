@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { BiSolidUser } from "react-icons/bi";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 import logo from "/logo.jpg";
 const Navbar = () => {
@@ -59,7 +60,9 @@ const Navbar = () => {
           {li}
         </ul>
       </div>
+      <Link>
       <img src={logo} className='w-20 h-14 rounded-3xl text-xl' alt="brand-logo" />
+      </Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1 flex justify-center items-center gap-5">
@@ -67,7 +70,8 @@ const Navbar = () => {
       </ul>
     </div>
     <div className="navbar-end">
-      <Link to={'/login'} className="btn glass"><BiSolidUser className='text-2xl text-yellow-800' />Login</Link>
+      <Link to={'/login'} className="btn glass"><BiSolidUser className='text-2xl text-yellow-500' />Login</Link>
+      <Link to={'/registration'} className="btn glass"><FaArrowRightToBracket className='text-2xl text-yellow-500'/>registration</Link>
       {/* <div className='flex justify-center items-center'>
       <div>
       <h2 className="text-xl mr-10">Me</h2>
