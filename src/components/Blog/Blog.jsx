@@ -4,8 +4,8 @@ const Blog = () => {
       <h2 className="text-center text-2xl font-bold mb-10">
         Frequently Asked Questions
       </h2>
-      <div className="flex justify-center items-center flex-col gap-5">
-        <div className="collapse collapse-plus bg-base-200">
+      <div className="flex justify-center items-center flex-col px-2 gap-5">
+        <div className="collapse collapse-plus bg-base-200 ">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium">
             What is One way data binding in react js ?

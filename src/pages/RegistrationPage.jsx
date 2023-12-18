@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import Navbar from "../Sections/Navbar";
@@ -7,8 +7,10 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../Providers/AuthProviders";
 
 const RegistrationPage = () => {
-  const {createUser, googleLogin, githubLogin} = useContext(AuthContext)
+  const {createUser, googleLogin, githubLogin, updateUserProfile} = useContext(AuthContext)
     const [showpassword, setSetshowpassword] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
 
     const handleRegister = (event) => {
@@ -45,8 +47,11 @@ const RegistrationPage = () => {
             title: "Success",
             text: "Registration successful",
           });
+          updateUserProfile(name, photourl);
+          return navigate(location?.state ? location.state : "/");
         })
         .catch(error =>{
+          console.log(error);
           Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -76,7 +81,7 @@ const RegistrationPage = () => {
     return (
       <div>
         <Navbar></Navbar>
-        <div className="lg:max-w-7xl h-[300px] py-10 flex lg:flex-row-reverse mx-auto justify-around">
+        <div className="lg:max-w-7xl h-[650px] py-5 flex lg:flex-row-reverse mx-auto justify-around">
       <div className="border rounded-lg md:max-w-7xl">
       <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
           Register your Account

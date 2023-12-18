@@ -5,6 +5,7 @@ import Allfood from "./components/Allfood/Allfood";
 import Blog from "./components/Blog/Blog";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import PrivateRoutes from "./Providers/PrivateRoutes";
 
 const Routes = createBrowserRouter([
     {
@@ -18,7 +19,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <Blog></Blog>
+                element: <PrivateRoutes><Blog></Blog></PrivateRoutes>
             },
         ]
     },

@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import Navbar from "../Sections/Navbar";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
  
 const LoginPage = () => {
-  const {loginUser} = useContext(AuthContext)
+  const {loginUser} = useContext(AuthContext);
+  const navigate = useNavigate();
     const [showpassword, setSetshowpassword] = useState(false);
 
     const handleLogin = (event) => {
@@ -41,6 +42,7 @@ const LoginPage = () => {
             title: "Success",
             text: "User Login successfull",
           });
+          navigate(location?.state ? location.state : "/");
         })
         .catch(error => {
           Swal.fire({
