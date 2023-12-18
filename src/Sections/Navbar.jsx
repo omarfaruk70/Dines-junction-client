@@ -64,8 +64,8 @@ const Navbar = () => {
           </li>
   </>
     return (
-      <div>
-        <div className="navbar px-2 md:px-5 lg:px-10 border-b-2 border-gray-300 bg-base-100">
+      <div className='sticky top-0 z-[999]'>
+        <div className="navbar px-2 md:px-5 h-[80px] lg:px-10 border-b-2 border-gray-300 bg-base-100">
     <div className="navbar-start">
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

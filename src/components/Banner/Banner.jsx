@@ -13,8 +13,8 @@ const Banner = () => {
     <div id="slide1" className="carousel-item h-[300px] md:h-[600px] relative w-full">
       <img src={b1} className="w-full  rounded-2xl" />
       <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] absolute rounded-2xl w-full h-full">
-      <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-5 ">
-        <h2 className="md:text-5xl text-2xl font-bold  ">“we serve more than just food. <br /> we serve an experience. <br /> a memory, a delight”</h2>
+      <div className="w-full md:w-1/2  md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-5">
+        <h2 className="md:text-6xl md:leading-[55px] text-2xl font-bold  ">“we serve more than just food. we serve an experience. a memory, a delight”</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
           <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
@@ -37,8 +37,8 @@ const Banner = () => {
     <div id="slide2" className="carousel-item h-[300px] md:h-[600px] relative w-full">
       <img src={b2} className="w-full  rounded-2xl" />
       <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] absolute rounded-2xl   w-full h-full">
-      <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-3 ">
-        <h2 className="md:text-5xl text-2xl font-bold  ">Dine with us, where every <br /> meal is a celebration, <br />and your satisfaction is our masterpiece.</h2>
+      <div className="w-full md:w-1/2  md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-5">
+        <h2 className="md:text-5xl md:leading-[67px] text-2xl font-bold  ">Dine with us, where every meal is a celebration,and your satisfaction is our masterpiece.</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
           <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
@@ -61,8 +61,8 @@ const Banner = () => {
     <div id="slide3" className="carousel-item h-[300px] md:h-[600px] relative w-full">
       <img src={b3} className="w-full  rounded-2xl" />
       <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] absolute rounded-2xl w-full h-full">
-      <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-3 ">
-        <h2 className="md:text-5xl text-2xl font-bold  ">Elevate your senses with each dish <br />—a journey of flavors,  <br />crafted exclusively for you</h2>
+      <div className="w-full md:w-1/2  md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-5">
+        <h2 className="md:text-6xl md:leading-[55px] text-2xl font-bold  ">Elevate your senses with each dish —a journey of flavors, crafted exclusively for you</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
           <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
@@ -85,9 +85,9 @@ const Banner = () => {
     <div id="slide4" className="carousel-item h-[300px] md:h-[600px] relative w-full">
       <img src={b4} className="w-full  rounded-2xl " />
       <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] absolute rounded-2xl w-full h-full">
-      <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-3 ">
-        <h2 className="md:text-5xl text-2xl font-bold  ">Taste the joy in every bite <br /> 
-        —where passion meets plate, <br /> creating moments to savor</h2>
+      <div className="w-full md:w-1/2  md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-5 ">
+        <h2 className="md:text-6xl md:leading-[55px] text-2xl font-bold  ">Taste the joy in every bite
+        —where passion meets plate, creating moments to savor</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
           <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
@@ -111,8 +111,8 @@ const Banner = () => {
       <img src={b5} className="w-full  rounded-2xl" />
       <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] absolute rounded-2xl w-full h-full">
       <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-3 ">
-        <h2 className="md:text-5xl text-2xl font-bold  ">Sip into the chill vibes - where <br />
-        every drop is a refreshing escape, <br /> and coolness meets delight.</h2>
+        <h2 className="md:text-6xl text-2xl font-bold md:leading-[78px]">Sip into the chill vibes - <br /> where
+        every drop is a refreshing escape,  <br />and coolness meets delight.</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
           <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
