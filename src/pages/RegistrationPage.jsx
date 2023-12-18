@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import Navbar from "../Sections/Navbar";
-
+import Swal from "sweetalert2";
+import { AuthContext } from "../Providers/AuthProviders";
 
 const RegistrationPage = () => {
+  const {createUser, googleLogin, githubLogin} = useContext(AuthContext)
     const [showpassword, setSetshowpassword] = useState(false);
+
+
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -14,12 +18,65 @@ const RegistrationPage = () => {
         const photourl = form.photourl.value;
         const email = form.email.value;
         const password = form.password.value;   
-        console.log(name, photourl, email, password);
+        if (password.length < 6) {
+          return Swal.fire({
+            icon: "error",
+            title: "Invalid formate...",
+            text: "password is less than 6 characters",
+          });
+        } else if (!/^(?=.*[A-Z]).+$/.test(password)) {
+          return Swal.fire({
+            icon: "error",
+            title: "Invalid formate...",
+            text: "Don't have a capital letter",
+          });
+        } else {
+          if (!/^(?=.*[#@$%&]).*$/.test(password))
+            return Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Don't Have a special charecter",
+            });
+        }
+        createUser(email, password)
+        .then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Registration successful",
+          });
+        })
+        .catch(error =>{
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.message,
+          });
+        })
 };
+      // login with social
+      const handleSocialLogin = (media) => {
+        media()
+        .then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "User Logged in successfully",
+          });
+        })
+        .catch(error => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.message,
+          });
+        })
+
+      }
     return (
       <div>
         <Navbar></Navbar>
-        <div className="lg:max-w-7xl h-[500px] py-10 flex mx-auto lg:flex-row justify-around">
+        <div className="lg:max-w-7xl h-[300px] py-10 flex lg:flex-row-reverse mx-auto justify-around">
       <div className="border rounded-lg md:max-w-7xl">
       <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
           Register your Account
@@ -70,6 +127,7 @@ const RegistrationPage = () => {
                   className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                   placeholder=" "
                   name="password"
+                  autoComplete="on"
                   required
                 />
                 <span
@@ -148,19 +206,19 @@ const RegistrationPage = () => {
                 <div className="h-[2px] w-1/4 bg-gray-700"></div>
           </div>
           <div className=" flex flex-col justify-center items-center">
-            <div className="flex mt-4 gap-10 text-3xl text-blue-950 cursor-pointer">
-              <span>
+            <div className="flex mt-4 gap-10 text-3xl text-blue-800 cursor-pointer">
+              <button onClick={()=> handleSocialLogin(googleLogin)} type="button">
                 <BsGoogle />
-              </span>
-              <span>
+              </button>
+              <button onClick={()=> handleSocialLogin(githubLogin)}  type="button">
                 <BsGithub />
-              </span>
+              </button>
             </div>
           </div>
         </form>
       </div>
         <div className="lg:max-w-6xl hidden lg:block">
-          <iframe src="https://lottie.host/embed/3d10a09b-b359-433f-ad81-88d7548d64cb/PD3fM8D3eV.json" className="lg:h-[600px] lg:w-[550px]"></iframe>
+          <iframe src="https://lottie.host/embed/3d10a09b-b359-433f-ad81-88d7548d64cb/PD3fM8D3eV.json" className="lg:h-[500px] lg:w-[550px]"></iframe>
         </div>
         </div>
       </div>

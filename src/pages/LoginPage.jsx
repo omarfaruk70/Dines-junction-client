@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import Navbar from "../Sections/Navbar";
-
+import { AuthContext } from "../Providers/AuthProviders";
+import Swal from "sweetalert2";
+ 
 const LoginPage = () => {
+  const {loginUser} = useContext(AuthContext)
     const [showpassword, setSetshowpassword] = useState(false);
 
     const handleLogin = (event) => {
@@ -11,7 +14,41 @@ const LoginPage = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        if (password.length < 6) {
+          return Swal.fire({
+            icon: "error",
+            title: "Invalid formate...",
+            text: "password is less than 6 characters",
+          });
+        } else if (!/^(?=.*[A-Z]).+$/.test(password)) {
+          return Swal.fire({
+            icon: "error",
+            title: "Invalid formate...",
+            text: "Don't have a capital letter",
+          });
+        } else {
+          if (!/^(?=.*[#@$%&]).*$/.test(password))
+            return Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Don't Have a special charecter",
+            });
+        }
+        loginUser(email, password)
+        .then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "User Login successfull",
+          });
+        })
+        .catch(error => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.message,
+          });
+        })
     }
     return (
         <div>
@@ -58,6 +95,7 @@ const LoginPage = () => {
                   className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                   placeholder=" "
                   name="password"
+                  autoComplete="on"
                   required
                 />
 

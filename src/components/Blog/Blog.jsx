@@ -6,7 +6,7 @@ const Blog = () => {
       </h2>
       <div className="flex justify-center items-center flex-col gap-5">
         <div className="collapse collapse-plus bg-base-200">
-          <input type="radio" name="my-accordion-3" checked="checked" />
+          <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium">
             What is One way data binding in react js ?
           </div>

@@ -1,9 +1,25 @@
 import { Link, NavLink } from 'react-router-dom';
 import { BiSolidUser } from "react-icons/bi";
-import { FaArrowRightToBracket } from "react-icons/fa6";
 
 import logo from "/logo.jpg";
+import { useContext } from 'react';
+import { AuthContext } from '../Providers/AuthProviders';
+import Swal from 'sweetalert2';
 const Navbar = () => {
+  const {user, logOutUser} = useContext(AuthContext);
+  console.log(user);
+  const handleLogoutUser = () => {
+    logOutUser()
+    .then(()=> {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "User log out",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    })
+  }
   const li = <>
          <li  className='hover:border-b-2 py-3 rounded-sm transition-all border-yellow-500'>
             <NavLink
@@ -70,30 +86,29 @@ const Navbar = () => {
       </ul>
     </div>
     <div className="navbar-end">
-      <Link to={'/login'} className="btn glass"><BiSolidUser className='text-2xl text-yellow-500' />Login</Link>
-      <Link to={'/registration'} className="btn glass"><FaArrowRightToBracket className='text-2xl text-yellow-500'/>registration</Link>
-      {/* <div className='flex justify-center items-center'>
+      { user?.email ? 
+    <div className='flex justify-center items-center'>
       <div>
-      <h2 className="text-xl mr-10">Me</h2>
+      <h2 className="text-xl mr-10">{user?.displayName}</h2>
       </div>
       <div className="dropdown dropdown-end">
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-          </div>
-        </div>
-        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li>
-            <a className="justify-between">
-              Profile
-              <span className="badge">New</span>
-            </a>
-          </li>
-          <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
-        </ul>
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full">
+      <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
       </div>
-    </div> */}
+      </div>
+      <ul tabIndex={0} className="flex flex-col justify-center items-center font-bold gap-y-5 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-40">
+      <Link to={'/hudai'} className="hover:text-yellow-500">
+      Profile
+      </Link>
+      <Link className='hover:text-yellow-500 ' to={'/blog'}>Settings</Link>
+      <Link onClick={handleLogoutUser} className='hover:text-yellow-500'>Logout</Link>
+      </ul>
+      </div>
+    </div> 
+      :
+    <Link to={'/login'} className="btn glass"><BiSolidUser className='text-2xl text-yellow-500' />Login</Link>
+     }
     </div>
         </div>
      </div>
