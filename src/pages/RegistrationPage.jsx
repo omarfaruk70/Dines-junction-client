@@ -8,9 +8,9 @@ import { AuthContext } from "../Providers/AuthProviders";
 
 const RegistrationPage = () => {
   const {createUser, googleLogin, githubLogin, updateUserProfile} = useContext(AuthContext)
-    const [showpassword, setSetshowpassword] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+  const [showpassword, setSetshowpassword] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
 
     const handleRegister = (event) => {
@@ -68,6 +68,7 @@ const RegistrationPage = () => {
             title: "Success",
             text: "User Logged in successfully",
           });
+          return navigate(location?.state ? location.state : "/");
         })
         .catch(error => {
           Swal.fire({

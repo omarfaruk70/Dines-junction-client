@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import Navbar from "../Sections/Navbar";
 import { AuthContext } from "../Providers/AuthProviders";
@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 const LoginPage = () => {
   const {loginUser} = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
     const [showpassword, setSetshowpassword] = useState(false);
 
     const handleLogin = (event) => {

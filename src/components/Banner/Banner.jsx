@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="carousel w-full mb-5">
+    <div className="carousel w-full mb-10">
     <div id="slide1" className="carousel-item h-[300px] md:h-[600px] relative w-full">
       <img src={b1} className="w-full  rounded-2xl" />
       <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] absolute rounded-2xl w-full h-full">
       <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-5 ">
         <h2 className="md:text-5xl text-2xl font-bold  ">“we serve more than just food. <br /> we serve an experience. <br /> a memory, a delight”</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
-          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/'}>Discover more <FaArrowRight className="md:text-xl" /></Link >
+          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
       </div>
       <div className="absolute flex gap-x-3 justify-end transform  left-5 right-5  top-3/4 md:top-3/4">
@@ -40,7 +40,7 @@ const Banner = () => {
       <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-3 ">
         <h2 className="md:text-5xl text-2xl font-bold  ">Dine with us, where every <br /> meal is a celebration, <br />and your satisfaction is our masterpiece.</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
-          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/'}>Discover more</Link >
+          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
       </div>
       <div className="absolute flex gap-x-3  justify-end transform  left-5 right-5  top-3/4 md:top-3/4">
@@ -64,7 +64,7 @@ const Banner = () => {
       <div className="w-full md:mx-4 px-3 text-white mt-5 md:mt-28 space-y-1 md:space-y-3 ">
         <h2 className="md:text-5xl text-2xl font-bold  ">Elevate your senses with each dish <br />—a journey of flavors,  <br />crafted exclusively for you</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
-          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/'}>Discover more</Link >
+          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
       </div>
       <div className="absolute flex gap-x-3  justify-end transform  left-5 right-5  top-3/4 md:top-3/4">
@@ -89,7 +89,7 @@ const Banner = () => {
         <h2 className="md:text-5xl text-2xl font-bold  ">Taste the joy in every bite <br /> 
         —where passion meets plate, <br /> creating moments to savor</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
-          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/'}>Discover more</Link >
+          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
       </div>
       <div className="absolute flex gap-x-3  justify-end transform  left-5 right-5 top-3/4 md:top-3/4">
@@ -114,7 +114,7 @@ const Banner = () => {
         <h2 className="md:text-5xl text-2xl font-bold  ">Sip into the chill vibes - where <br />
         every drop is a refreshing escape, <br /> and coolness meets delight.</h2>
         <p><span className="font-bold text-amber-500 text-3xl">30%</span> off for the New year</p>
-          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/'}>Discover more</Link >
+          <Link className="btn mr-3 bg-[#ec5d41eb] hover:bg-[#a74f3e] text-white" to={'/allfood'}>See menus <FaArrowRight className="md:text-xl" /></Link >
       </div>
       </div>
       <div className="absolute flex gap-x-3  justify-end transform  left-5 right-5 top-3/4 md:top-3/4">
