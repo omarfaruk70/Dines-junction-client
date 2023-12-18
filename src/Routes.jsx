@@ -6,6 +6,7 @@ import Blog from "./components/Blog/Blog";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import PrivateRoutes from "./Providers/PrivateRoutes";
+import Home from "./components/Home/Home";
 
 const Routes = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ const Routes = createBrowserRouter([
         element: <App></App>,
         errorElement: <Errorpage></Errorpage>,
         children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            },
             {
                 path: '/allfood',
                 element: <Allfood></Allfood>,
