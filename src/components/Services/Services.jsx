@@ -5,7 +5,7 @@ import { FaMobileScreen } from "react-icons/fa6";
 
 const Services = () => {
   return (
-    <div>
+    <div className="mb-20">
       <h1 className="text-5xl font-bold text-center">Our Services</h1>
       <p className="text-center py-2">
         We provides these services for our respectable customers
