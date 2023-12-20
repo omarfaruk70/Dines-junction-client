@@ -1,0 +1,439 @@
+[
+  {
+    "foodName": "Hydrabadi biriyani",
+    "foodImage": "https://i.ibb.co/1zXNp3H/Hydrabadi-biriyani.jpg",
+    "foodCategory": "Biriyani",
+    "price": 12.99,
+    "madeBy": "Chef Maria",
+    "foodOrigin": "India",
+    "ingredients": [
+      "basmati rice, chicken or lamb marinated in biryani masala, saffron-soaked in warm milk, and garnished with fresh mint and coriander leaves"
+    ],
+    "quantity": 10
+  },
+  {
+    "foodName": "Paner tikka",
+    "foodImage": "https://i.ibb.co/BGZKK85/paner-tikka.jpg",
+    "foodCategory": "tikka",
+    "price": 9.99,
+    "madeBy": "Chef Alex",
+    "foodOrigin": "India",
+    "ingredients": [
+      "yogurt blended with spices, gram flour (besan) for coating, aromatic kasuri methi (dried fenugreek leaves), and a squeeze of fresh lemon juice for a burst of citrus flavor"
+    ],
+    "quantity": 15
+  },
+  {
+    "foodName": "Murgh-Makhani",
+    "foodImage": "https://i.ibb.co/TcW40P0/Murgh-Makhani.jpg",
+    "foodCategory": "Makhani",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "India",
+    "ingredients": [
+      "succulent chicken, velvety tomato puree, creamy butter, rich cream, aromatic ginger-garlic paste, garam masala,"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Dosa",
+    "foodImage": "https://i.ibb.co/x8DQVWN/dosas.jpg",
+    "foodCategory": "Dosa",
+    "price": 18.99,
+    "madeBy": "Narayan",
+    "foodOrigin": "India",
+    "ingredients": [
+      "rice",
+      "raw fish (salmon, tuna)",
+      "seaweed",
+      "soy sauce",
+      "wasabi",
+      "ginger"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Chole vhature",
+    "foodImage": "https://i.ibb.co/B3FWJ6d/Chole-Bhature.jpg",
+    "foodCategory": "Sushi",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "india",
+    "ingredients": [
+      "a blend of aromatic spices, paired with deep-fried leavened bread (bhature), creating a flavorful and satisfying combination"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Tanduri chicken",
+    "foodImage": "https://i.ibb.co/yVL2cTt/Tandoori-Chicken.jpg",
+    "foodCategory": "chicken",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "India",
+    "ingredients": [
+      "blend of yogurt, spices like cumin and coriander, ginger, garlic, and a touch of red chili powder,"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Saag Panir",
+    "foodImage": "https://i.ibb.co/dWbPQdY/Saag-Paneer.jpg",
+    "foodCategory": "Panir",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "India",
+    "ingredients": [
+      "cumin and garam masala, creating a wholesome and flavorful dish"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Fish curry",
+    "foodImage": "https://i.ibb.co/XjMVq8F/fish-curry.jpg",
+    "foodCategory": "curry",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "india",
+    "ingredients": [
+      " mustard seeds, curry leaves, turmeric, and a blend of aromatic spices for a delicious "
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Raita",
+    "foodImage": "https://i.ibb.co/jVhXHn4/Raita.jpg",
+    "foodCategory": "Raita",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "India",
+    "ingredients": [
+      " chopped cucumber, tomatoes, and mint, seasoned with cumin, coriander, and a pinch of salt"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Dim Sum",
+    "foodImage": "https://i.ibb.co/vVs9zvg/dimsum.jpg",
+    "foodCategory": "dim sum",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "China",
+    "ingredients": [
+      " meat, seafood, or vegetables, wrapped in thin dough, "
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Peeking Duck",
+    "foodImage": "https://i.ibb.co/HT6fZSb/peeking-duck.jpg",
+    "foodCategory": "Peeking Duck",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "China",
+    "ingredients": [
+      "soy sauce, Chinese five-spice powder, honey, and aromatic spices"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hot and Sour Soup",
+    "foodImage": "https://i.ibb.co/mCrxgvC/Hot-and-Sour-Soup.jpg",
+    "foodCategory": "Soup",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "China",
+    "ingredients": [
+      "tofu, wood ear mushrooms, bamboo shoots, and beaten eggs"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Kung Pao chicken",
+    "foodImage": "https://i.ibb.co/5MLkJzJ/Kung-Pao-Chicken.jpg",
+    "foodCategory": "chicken",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "China",
+    "ingredients": [
+      "soy sauce, hoisin sauce, vinegar, and ginger"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Sweet and sour pork",
+    "foodImage": "https://i.ibb.co/MST714J/Sweet-and-Sour-Pork.jpg",
+    "foodCategory": "Sushi",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "China",
+    "ingredients": [
+      "ineapple juice, vinegar, ketchup, and sugar, along with colorful bell peppers and onions"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Chow mein",
+    "foodImage": "https://i.ibb.co/10WcfGd/Chow-Mein.jpg",
+    "foodCategory": "chow mein",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "China",
+    "ingredients": [
+      " cabbage, carrots, and bean sprouts, along with proteins like chicken, beef, or shrimp,"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Spring rolls",
+    "foodImage": "https://i.ibb.co/3cTdSJ4/Spring-Rolls.jpg",
+    "foodCategory": "rolls",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "china",
+    "ingredients": [
+      "shredded cabbage, carrots, and bean sprouts"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Fried rice",
+    "foodImage": "https://i.ibb.co/TTYnSdX/Fried-Rice.jpg",
+    "foodCategory": "rice",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "china",
+    "ingredients": [
+      "cooked rice with a medley of vegetables like peas, carrots, and corn"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hainanese chicken rice",
+    "foodImage": "https://i.ibb.co/xfY0Nx5/Hainanese-Chicken-Rice.jpg",
+    "foodCategory": "rice",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "china",
+    "ingredients": [
+      "rice, chicken, garlic , ginger and chicken"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hamburger",
+    "foodImage": "https://i.ibb.co/qJDW3wL/Hamburger.jpg",
+    "foodCategory": "Burger",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "lettuce, tomato, onion, pickles, and condiments like ketchup and mustard"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hot Dog",
+    "foodImage": "https://i.ibb.co/25FQ1Pb/hot-dog.jpg",
+    "foodCategory": "Sushi",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "Musterd, Catchup, onion, Bun"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Pizza american",
+    "foodImage": "https://i.ibb.co/stBHTYF/pizza-american.jpg",
+    "foodCategory": "Pizza",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "pepperoni, sausage, mushrooms, green peppers, and onions, "
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "BBQ Ribs",
+    "foodImage": "https://i.ibb.co/B6nkKtS/BBQ-Ribs.jpg",
+    "foodCategory": "BBQ",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "barbecue sauce, resulting in tender, smoky, and savory meat "
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Buffalo wings",
+    "foodImage": "https://i.ibb.co/RpyH8V2/Buffalo-Wings.jpg",
+    "foodCategory": "Wings",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      " hot sauce, butter, and other seasonings. "
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Macaroni Cheese",
+    "foodImage": "https://i.ibb.co/RpyH8V2/Buffalo-Wings.jpg",
+    "foodCategory": "cheese",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      " elbow macaroni pasta enveloped in a creamy cheese sauce, often made with cheddar, mozzarella, or a combination of cheeses"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Fried chicken",
+    "foodImage": "https://i.ibb.co/98hxJYx/Fried-Chicken.jpg",
+    "foodCategory": "chicken",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "Chicken , salt , powder , Garlic, oil"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Cheese Burger",
+    "foodImage": "https://i.ibb.co/jHPzyHY/Cheeseburger.jpg",
+    "foodCategory": "Burger",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "Bun, butter , salt,oil , garlic,ginger"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Sandwich",
+    "foodImage": "https://i.ibb.co/2dXbM4j/Sandwich.jpg",
+    "foodCategory": "sandwich",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "America",
+    "ingredients": [
+      "cheese , vegetable, rolls, chicken garlic, oil"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Dhakaiya Daylight biriyani",
+    "foodImage": "https://i.ibb.co/JFq2B2w/Dhaka-Delight-Biryani.jpg",
+    "foodCategory": "Biriyani",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "basmati rice, marinated chicken or mutton, and spiced potatoes."
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hilsa vapa",
+    "foodImage": "https://i.ibb.co/KyjMD7S/Hilsha-Bhapa.jpg",
+    "foodCategory": "Hilsa",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "Hilsha, onion, oil, water, masala"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Bhuna Khichuri",
+    "foodImage": "https://i.ibb.co/jMqTxFd/Bhuna-Khichuri.jpg",
+    "foodCategory": "Khichuri",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "Rich, Mutton, chicken, garlic, sauce, Cucumber etc"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Doi chira",
+    "foodImage": "https://i.ibb.co/dk97SSK/Doi-chira.jpg",
+    "foodCategory": "Doi chira",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "yogurt, Flattened rice, sugar, etc"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Chicken biriyani",
+    "foodImage": "https://i.ibb.co/fMhFwx4/chicken-biryani.jpg",
+    "foodCategory": "Biriyani",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "Basmoti rice, mutton , chicken, ginger , garlic, cucumber etc"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hajir biriyani",
+    "foodImage": "https://i.ibb.co/zn9GsD3/hajir-biryani.jpg",
+    "foodCategory": "Biriyani",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "rice, Mutton. chicken, tomato, potato"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Pasta",
+    "foodImage": "https://i.ibb.co/bHjP2cn/pasta.jpg",
+    "foodCategory": "Pasta",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "Durum Wheat Semolina, water, garlic, onion, oil etc"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Beef Curry",
+    "foodImage": "https://i.ibb.co/hK7Ygkv/beef-curry.jpg",
+    "foodCategory": "curry",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "Mutton, Beef curry, oil, masal, ginger, water etc"
+    ],
+    "quantity": 8
+  },
+  {
+    "foodName": "Hilsa Fry",
+    "foodImage": "https://i.ibb.co/26cm7kG/hilsha-fry.jpg",
+    "foodCategory": "Fry",
+    "price": 18.99,
+    "madeBy": "Sushi Master Hiroshi",
+    "foodOrigin": "Bangladesh",
+    "ingredients": [
+      "Hilsa, oil, masala, garlic, onion, ginger"
+    ],
+    "quantity": 8
+  }
+]
