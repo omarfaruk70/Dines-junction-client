@@ -1,5 +1,5 @@
 import Banner from "../Banner/Banner";
-import OurChefs from "../Services/OurChefs/OurChefs";
+import OurChefs from "../OurChefs/OurChefs";
 import Services from "../Services/Services";
 
 const Home = () => {

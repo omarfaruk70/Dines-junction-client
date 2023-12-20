@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import FoodsCard from "../Services/FoodsCard/FoodsCard";
-
+import FoodsCard from "../FoodsCard/FoodsCard";
 const Allfood = () => {
     const allfoodData = useLoaderData();
     return (

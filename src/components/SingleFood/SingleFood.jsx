@@ -1,7 +1,7 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const SingleFood = () => {
-  const singleFood = useLoaderData();
+  const singlefood = useLoaderData();
   const {
     _id,
     foodName,
@@ -11,7 +11,7 @@ const SingleFood = () => {
     madeBy,
     foodOrigin,
     ingredients,
-  } = singleFood;
+  } = singlefood;
   return (
     <div className="md:px-3">
       <h2 className="text-4xl text-center py-5">
@@ -39,7 +39,9 @@ const SingleFood = () => {
           </p>
           <p className="text-xl">Made by: <span className="font-bold">{madeBy}</span></p>
         </div>
-         <button className="btn mx-5 md:mx-16  bg-amber-500 hover:bg-amber-600 text-white my-2">Order Now</button>  
+        <Link to={'/foodpurchase'} className="btn mx-5 md:mx-16  bg-amber-500 hover:bg-amber-600 text-white my-2">
+         <button>Order Now</button>  
+         </Link>
       </div>
     </div>
   );

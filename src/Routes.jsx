@@ -8,6 +8,7 @@ import RegistrationPage from "./pages/RegistrationPage";
 import PrivateRoutes from "./Providers/PrivateRoutes";
 import Home from "./components/Home/Home";
 import SingleFood from "./components/SingleFood/SingleFood";
+import Foodpurchase from "./components/Foodpurchase/Foodpurchase";
 
 const Routes = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const Routes = createBrowserRouter([
                 path: '/allfood/singlefood/:id',
                 element: <SingleFood></SingleFood>,
                 loader: ({params}) => fetch(`http://localhost:5000/api/v1/route/getallfood/singlefood/${params.id}`)
+            },
+            {
+                path: '/foodpurchase',
+                element: <Foodpurchase></Foodpurchase>,
             },
             {
                 path: '/blog',
