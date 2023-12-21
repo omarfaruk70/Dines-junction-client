@@ -39,7 +39,7 @@ const SingleFood = () => {
           </p>
           <p className="text-xl">Made by: <span className="font-bold">{madeBy}</span></p>
         </div>
-        <Link to={'/foodpurchase'} className="btn mx-5 md:mx-16  bg-amber-500 hover:bg-amber-600 text-white my-2">
+        <Link to={`/foodpurchase/fooditem/${_id}`} className="btn mx-5 md:mx-16  bg-amber-500 hover:bg-amber-600 text-white my-2">
          <button>Order Now</button>  
          </Link>
       </div>

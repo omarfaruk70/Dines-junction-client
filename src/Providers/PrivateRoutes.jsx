@@ -9,8 +9,9 @@ const PrivateRoutes = ({children}) => {
     if (loading) {
         return (
           <div className="flex flex-col justify-center items-center h-screen">
-           <iframe src="https://lottie.host/embed/f462cd88-dbe6-4ed4-9411-c9429e069516/zAjrKTBy5A.json" className="h[500px] w-[500px"></iframe>
-          </div>
+          <span className="loading bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90 w-10 md:w-20 lg:w-32"></span>
+          ;
+        </div>
         );
       }
       if (!user?.email) {
