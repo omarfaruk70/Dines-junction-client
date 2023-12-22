@@ -2,10 +2,10 @@
   {
     "foodName": "Hydrabadi biriyani",
     "foodImage": "https://i.ibb.co/1zXNp3H/Hydrabadi-biriyani.jpg",
-    "foodCategory": "Biriyani",
+    "foodorigin": "Biriyani",
     "price": 12.99,
     "madeBy": "Chef Maria",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       "basmati rice, chicken or lamb marinated in biryani masala, saffron-soaked in warm milk, and garnished with fresh mint and coriander leaves"
     ],
@@ -14,10 +14,10 @@
   {
     "foodName": "Paner tikka",
     "foodImage": "https://i.ibb.co/BGZKK85/paner-tikka.jpg",
-    "foodCategory": "tikka",
+    "foodorigin": "tikka",
     "price": 9.99,
     "madeBy": "Chef Alex",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       "yogurt blended with spices, gram flour (besan) for coating, aromatic kasuri methi (dried fenugreek leaves), and a squeeze of fresh lemon juice for a burst of citrus flavor"
     ],
@@ -26,10 +26,10 @@
   {
     "foodName": "Murgh-Makhani",
     "foodImage": "https://i.ibb.co/TcW40P0/Murgh-Makhani.jpg",
-    "foodCategory": "Makhani",
+    "foodorigin": "Makhani",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       "succulent chicken, velvety tomato puree, creamy butter, rich cream, aromatic ginger-garlic paste, garam masala,"
     ],
@@ -38,10 +38,10 @@
   {
     "foodName": "Dosa",
     "foodImage": "https://i.ibb.co/x8DQVWN/dosas.jpg",
-    "foodCategory": "Dosa",
+    "foodorigin": "Dosa",
     "price": 18.99,
     "madeBy": "Narayan",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       "rice",
       "raw fish (salmon, tuna)",
@@ -55,10 +55,10 @@
   {
     "foodName": "Chole vhature",
     "foodImage": "https://i.ibb.co/B3FWJ6d/Chole-Bhature.jpg",
-    "foodCategory": "Sushi",
+    "foodorigin": "Sushi",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "india",
+    "origin": "India",
     "ingredients": [
       "a blend of aromatic spices, paired with deep-fried leavened bread (bhature), creating a flavorful and satisfying combination"
     ],
@@ -67,10 +67,10 @@
   {
     "foodName": "Tanduri chicken",
     "foodImage": "https://i.ibb.co/yVL2cTt/Tandoori-Chicken.jpg",
-    "foodCategory": "chicken",
+    "foodorigin": "chicken",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       "blend of yogurt, spices like cumin and coriander, ginger, garlic, and a touch of red chili powder,"
     ],
@@ -79,10 +79,10 @@
   {
     "foodName": "Saag Panir",
     "foodImage": "https://i.ibb.co/dWbPQdY/Saag-Paneer.jpg",
-    "foodCategory": "Panir",
+    "foodorigin": "Panir",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       "cumin and garam masala, creating a wholesome and flavorful dish"
     ],
@@ -91,10 +91,10 @@
   {
     "foodName": "Fish curry",
     "foodImage": "https://i.ibb.co/XjMVq8F/fish-curry.jpg",
-    "foodCategory": "curry",
+    "foodorigin": "curry",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "india",
+    "origin": "India",
     "ingredients": [
       " mustard seeds, curry leaves, turmeric, and a blend of aromatic spices for a delicious "
     ],
@@ -103,10 +103,10 @@
   {
     "foodName": "Raita",
     "foodImage": "https://i.ibb.co/jVhXHn4/Raita.jpg",
-    "foodCategory": "Raita",
+    "foodorigin": "Raita",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "India",
+    "origin": "India",
     "ingredients": [
       " chopped cucumber, tomatoes, and mint, seasoned with cumin, coriander, and a pinch of salt"
     ],
@@ -115,10 +115,10 @@
   {
     "foodName": "Dim Sum",
     "foodImage": "https://i.ibb.co/vVs9zvg/dimsum.jpg",
-    "foodCategory": "dim sum",
+    "foodorigin": "dim sum",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "China",
+    "origin": "China",
     "ingredients": [
       " meat, seafood, or vegetables, wrapped in thin dough, "
     ],
@@ -127,10 +127,10 @@
   {
     "foodName": "Peeking Duck",
     "foodImage": "https://i.ibb.co/HT6fZSb/peeking-duck.jpg",
-    "foodCategory": "Peeking Duck",
+    "foodorigin": "Peeking Duck",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "China",
+    "origin": "China",
     "ingredients": [
       "soy sauce, Chinese five-spice powder, honey, and aromatic spices"
     ],
@@ -139,10 +139,10 @@
   {
     "foodName": "Hot and Sour Soup",
     "foodImage": "https://i.ibb.co/mCrxgvC/Hot-and-Sour-Soup.jpg",
-    "foodCategory": "Soup",
+    "foodorigin": "Soup",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "China",
+    "origin": "China",
     "ingredients": [
       "tofu, wood ear mushrooms, bamboo shoots, and beaten eggs"
     ],
@@ -151,10 +151,10 @@
   {
     "foodName": "Kung Pao chicken",
     "foodImage": "https://i.ibb.co/5MLkJzJ/Kung-Pao-Chicken.jpg",
-    "foodCategory": "chicken",
+    "foodorigin": "chicken",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "China",
+    "origin": "China",
     "ingredients": [
       "soy sauce, hoisin sauce, vinegar, and ginger"
     ],
@@ -163,10 +163,10 @@
   {
     "foodName": "Sweet and sour pork",
     "foodImage": "https://i.ibb.co/MST714J/Sweet-and-Sour-Pork.jpg",
-    "foodCategory": "Sushi",
+    "foodorigin": "Sushi",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "China",
+    "origin": "China",
     "ingredients": [
       "ineapple juice, vinegar, ketchup, and sugar, along with colorful bell peppers and onions"
     ],
@@ -175,10 +175,10 @@
   {
     "foodName": "Chow mein",
     "foodImage": "https://i.ibb.co/10WcfGd/Chow-Mein.jpg",
-    "foodCategory": "chow mein",
+    "foodorigin": "chow mein",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "China",
+    "origin": "China",
     "ingredients": [
       " cabbage, carrots, and bean sprouts, along with proteins like chicken, beef, or shrimp,"
     ],
@@ -187,10 +187,10 @@
   {
     "foodName": "Spring rolls",
     "foodImage": "https://i.ibb.co/3cTdSJ4/Spring-Rolls.jpg",
-    "foodCategory": "rolls",
+    "foodorigin": "rolls",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "china",
+    "origin": "china",
     "ingredients": [
       "shredded cabbage, carrots, and bean sprouts"
     ],
@@ -199,10 +199,10 @@
   {
     "foodName": "Fried rice",
     "foodImage": "https://i.ibb.co/TTYnSdX/Fried-Rice.jpg",
-    "foodCategory": "rice",
+    "foodorigin": "rice",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "china",
+    "origin": "china",
     "ingredients": [
       "cooked rice with a medley of vegetables like peas, carrots, and corn"
     ],
@@ -211,10 +211,10 @@
   {
     "foodName": "Hainanese chicken rice",
     "foodImage": "https://i.ibb.co/xfY0Nx5/Hainanese-Chicken-Rice.jpg",
-    "foodCategory": "rice",
+    "foodorigin": "rice",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "china",
+    "origin": "china",
     "ingredients": [
       "rice, chicken, garlic , ginger and chicken"
     ],
@@ -223,10 +223,10 @@
   {
     "foodName": "Hamburger",
     "foodImage": "https://i.ibb.co/qJDW3wL/Hamburger.jpg",
-    "foodCategory": "Burger",
+    "foodorigin": "Burger",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "lettuce, tomato, onion, pickles, and condiments like ketchup and mustard"
     ],
@@ -235,10 +235,10 @@
   {
     "foodName": "Hot Dog",
     "foodImage": "https://i.ibb.co/25FQ1Pb/hot-dog.jpg",
-    "foodCategory": "Sushi",
+    "foodorigin": "Sushi",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "Musterd, Catchup, onion, Bun"
     ],
@@ -247,10 +247,10 @@
   {
     "foodName": "Pizza american",
     "foodImage": "https://i.ibb.co/stBHTYF/pizza-american.jpg",
-    "foodCategory": "Pizza",
+    "foodorigin": "Pizza",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "pepperoni, sausage, mushrooms, green peppers, and onions, "
     ],
@@ -259,10 +259,10 @@
   {
     "foodName": "BBQ Ribs",
     "foodImage": "https://i.ibb.co/B6nkKtS/BBQ-Ribs.jpg",
-    "foodCategory": "BBQ",
+    "foodorigin": "BBQ",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "barbecue sauce, resulting in tender, smoky, and savory meat "
     ],
@@ -271,10 +271,10 @@
   {
     "foodName": "Buffalo wings",
     "foodImage": "https://i.ibb.co/RpyH8V2/Buffalo-Wings.jpg",
-    "foodCategory": "Wings",
+    "foodorigin": "Wings",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       " hot sauce, butter, and other seasonings. "
     ],
@@ -283,10 +283,10 @@
   {
     "foodName": "Macaroni Cheese",
     "foodImage": "https://i.ibb.co/RpyH8V2/Buffalo-Wings.jpg",
-    "foodCategory": "cheese",
+    "foodorigin": "cheese",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       " elbow macaroni pasta enveloped in a creamy cheese sauce, often made with cheddar, mozzarella, or a combination of cheeses"
     ],
@@ -295,10 +295,10 @@
   {
     "foodName": "Fried chicken",
     "foodImage": "https://i.ibb.co/98hxJYx/Fried-Chicken.jpg",
-    "foodCategory": "chicken",
+    "foodorigin": "chicken",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "Chicken , salt , powder , Garlic, oil"
     ],
@@ -307,10 +307,10 @@
   {
     "foodName": "Cheese Burger",
     "foodImage": "https://i.ibb.co/jHPzyHY/Cheeseburger.jpg",
-    "foodCategory": "Burger",
+    "foodorigin": "Burger",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "Bun, butter , salt,oil , garlic,ginger"
     ],
@@ -319,10 +319,10 @@
   {
     "foodName": "Sandwich",
     "foodImage": "https://i.ibb.co/2dXbM4j/Sandwich.jpg",
-    "foodCategory": "sandwich",
+    "foodorigin": "sandwich",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "America",
+    "origin": "America",
     "ingredients": [
       "cheese , vegetable, rolls, chicken garlic, oil"
     ],
@@ -331,10 +331,10 @@
   {
     "foodName": "Dhakaiya Daylight biriyani",
     "foodImage": "https://i.ibb.co/JFq2B2w/Dhaka-Delight-Biryani.jpg",
-    "foodCategory": "Biriyani",
+    "foodorigin": "Biriyani",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "basmati rice, marinated chicken or mutton, and spiced potatoes."
     ],
@@ -343,10 +343,10 @@
   {
     "foodName": "Hilsa vapa",
     "foodImage": "https://i.ibb.co/KyjMD7S/Hilsha-Bhapa.jpg",
-    "foodCategory": "Hilsa",
+    "foodorigin": "Hilsa",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "Hilsha, onion, oil, water, masala"
     ],
@@ -355,10 +355,10 @@
   {
     "foodName": "Bhuna Khichuri",
     "foodImage": "https://i.ibb.co/jMqTxFd/Bhuna-Khichuri.jpg",
-    "foodCategory": "Khichuri",
+    "foodorigin": "Khichuri",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "Rich, Mutton, chicken, garlic, sauce, Cucumber etc"
     ],
@@ -367,10 +367,10 @@
   {
     "foodName": "Doi chira",
     "foodImage": "https://i.ibb.co/dk97SSK/Doi-chira.jpg",
-    "foodCategory": "Doi chira",
+    "foodorigin": "Doi chira",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "yogurt, Flattened rice, sugar, etc"
     ],
@@ -379,10 +379,10 @@
   {
     "foodName": "Chicken biriyani",
     "foodImage": "https://i.ibb.co/fMhFwx4/chicken-biryani.jpg",
-    "foodCategory": "Biriyani",
+    "foodorigin": "Biriyani",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "Basmoti rice, mutton , chicken, ginger , garlic, cucumber etc"
     ],
@@ -391,10 +391,10 @@
   {
     "foodName": "Hajir biriyani",
     "foodImage": "https://i.ibb.co/zn9GsD3/hajir-biryani.jpg",
-    "foodCategory": "Biriyani",
+    "foodorigin": "Biriyani",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "rice, Mutton. chicken, tomato, potato"
     ],
@@ -403,10 +403,10 @@
   {
     "foodName": "Pasta",
     "foodImage": "https://i.ibb.co/bHjP2cn/pasta.jpg",
-    "foodCategory": "Pasta",
+    "foodorigin": "Pasta",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "Durum Wheat Semolina, water, garlic, onion, oil etc"
     ],
@@ -415,10 +415,10 @@
   {
     "foodName": "Beef Curry",
     "foodImage": "https://i.ibb.co/hK7Ygkv/beef-curry.jpg",
-    "foodCategory": "curry",
+    "foodorigin": "curry",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "Mutton, Beef curry, oil, masal, ginger, water etc"
     ],
@@ -427,10 +427,10 @@
   {
     "foodName": "Hilsa Fry",
     "foodImage": "https://i.ibb.co/26cm7kG/hilsha-fry.jpg",
-    "foodCategory": "Fry",
+    "foodorigin": "Fry",
     "price": 18.99,
     "madeBy": "Sushi Master Hiroshi",
-    "foodOrigin": "Bangladesh",
+    "origin": "Bangladesh",
     "ingredients": [
       "Hilsa, oil, masala, garlic, onion, ginger"
     ],
