@@ -23,7 +23,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/allfood',
                 element: <Allfood></Allfood>,
-                loader: () => fetch('http://localhost:5000/api/v1/route/getallfood')
+                // loader: () => fetch('http://localhost:5000/api/v1/route/getallfood')
             },
             {
                 path: '/allfood/singlefood/:id',

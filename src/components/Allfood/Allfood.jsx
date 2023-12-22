@@ -1,17 +1,38 @@
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import FoodsCard from "../FoodsCard/FoodsCard";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import useAxios from "../../hooks/useAxios";
 const Allfood = () => {
-  const allfoodData = useLoaderData();
+  // const allfoodData = useLoaderData();
+  const axios = useAxios();
   const allorigin = [
     'India',
     'China',
     'America',
     'Bangladesh'
   ]
+
+
   // const [search, setSearch] = useState('');
   const [price, setPrice] = useState("");
   const [origin, setOrigin] = useState("");
+
+  const getServices = async () => {
+    const res = await axios.get(`/route/getallfood/?origin=${origin}&sortField=price&sortOrder=${price}`);
+    return res;
+  };
+  const { data:allfoodData, isLoading, isError, error } = useQuery({
+    // here the object property also use isLoading, isError, error,
+    queryKey: ["foods", price, origin],
+    queryFn: getServices,
+  });
+  if(isLoading){
+    return <div className="text-3xl font-bold flex justify-center items-center h-screen text-blue-600">Loading....</div>
+   }
+ if(isError){
+  return <div className="text-3xl font-bold flex justify-center items-center h-screen text-blue-600">Something went wrong {error}</div>
+ }
   return (
     <div className="max-w-7xl mx-auto py-3 mb-5">
       <h2 className="text-3xl font-bold text-center">Our Available foods</h2>
@@ -63,7 +84,7 @@ const Allfood = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2 md:px-4">
-        {allfoodData.map((food) => (
+        {allfoodData?.data.map((food) => (
           <FoodsCard key={food._id} food={food}></FoodsCard>
         ))}
       </div>
