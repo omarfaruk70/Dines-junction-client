@@ -3,8 +3,11 @@ import FoodsCard from "../FoodsCard/FoodsCard";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import useAxios from "../../hooks/useAxios";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { useLoaderData } from "react-router-dom";
+
 const Allfood = () => {
-  // const allfoodData = useLoaderData();
+  const allfoodCount = useLoaderData();
   const axios = useAxios();
   const allorigin = [
     'India',
@@ -17,21 +20,39 @@ const Allfood = () => {
   // const [search, setSearch] = useState('');
   const [price, setPrice] = useState("");
   const [origin, setOrigin] = useState("");
-
+  const [page, setPage] = useState(1);
+  const limitPerPage = 9;
+  
   const getServices = async () => {
-    const res = await axios.get(`/route/getallfood/?origin=${origin}&sortField=price&sortOrder=${price}`);
+    const res = await axios.get(`/route/getallfood/?page=${page}&limit=${limitPerPage}&origin=${origin}&sortField=price&sortOrder=${price}`);
     return res;
   };
   const { data:allfoodData, isLoading, isError, error } = useQuery({
     // here the object property also use isLoading, isError, error,
-    queryKey: ["foods", price, origin],
+    queryKey: ["foods", price, origin, page],
     queryFn: getServices,
   });
   if(isLoading){
-    return <div className="text-3xl font-bold flex justify-center items-center h-screen text-blue-600">Loading....</div>
-   }
- if(isError){
-  return <div className="text-3xl font-bold flex justify-center items-center h-screen text-blue-600">Something went wrong {error}</div>
+    return <div className="text-3xl font-bold flex justify-center items-center h-screen text-amber-400">Loading....</div>
+  }
+  if(isError){
+    return <div className="text-3xl font-bold flex justify-center items-center h-screen">Something went wrong {error}</div>
+  }
+  //  pagination functionality
+// const totalFoodItems = allfoodData?.data?.length || 0;
+const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
+
+
+ const handlePrev = () => {
+  if(page > 1){
+    setPage(page - 1);
+  }
+ }
+
+ const handleNext = () => {
+  if(page < totalPage){
+    setPage(page + 1)
+  }
  }
   return (
     <div className="max-w-7xl mx-auto py-3 mb-5">
@@ -87,6 +108,25 @@ const Allfood = () => {
         {allfoodData?.data.map((food) => (
           <FoodsCard key={food._id} food={food}></FoodsCard>
         ))}
+      </div>
+      <div className="mt-6 flex justify-center">
+       <div className=" border-amber-400 rounded-lg px-3 py-2 border-2 flex gap-1">
+       <button onClick={handlePrev} className="btn btn-circle"><FaArrowLeftLong /></button>
+       <div>
+       {
+        Array(totalPage).fill(0).map((item, i) => {
+          const pageNum = i + 1;
+          return <button key={i}
+          onClick={()=> setPage(pageNum)}
+          className={page === pageNum? "btn btn-circle bg-amber-400 text-white" : 'btn btn-circle btn-ghost'}
+          >
+            {pageNum}
+          </button>
+        } )
+       }
+       </div>
+       <button onClick={handleNext} className="btn btn-circle"><FaArrowRightLong /></button>
+       </div>
       </div>
     </div>
   );
