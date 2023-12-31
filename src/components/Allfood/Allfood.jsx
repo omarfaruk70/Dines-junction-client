@@ -20,8 +20,10 @@ const Allfood = () => {
   // const [search, setSearch] = useState('');
   const [price, setPrice] = useState("");
   const [origin, setOrigin] = useState("");
+  const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
   const limitPerPage = 9;
+  console.log(query);
   
   const getServices = async () => {
     const res = await axios.get(`/route/getallfood/?page=${page}&limit=${limitPerPage}&origin=${origin}&sortField=price&sortOrder=${price}`);
@@ -64,6 +66,7 @@ const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
             <div className="relative h-10 w-full min-w-[288px]">
               <input
                 type="search"
+                onChange={(e)=>setQuery(e.target.value)}
                 className="peer h-full w-full rounded-[7px] border border-yellow-600 border-t-transparent bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-yellow-600 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
               />
@@ -71,12 +74,6 @@ const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
                 Search here...
               </label>
             </div>
-            <button
-              className="!absolute right-1 top-1 select-none rounded bg-yellow-500 text-white py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 shadow-md shadow-blue-gray-500/10 transition-all hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-            >
-              Search
-            </button>
           </div>
         </div>
         <div>

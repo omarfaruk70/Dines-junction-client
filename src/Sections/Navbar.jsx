@@ -97,11 +97,11 @@ const Navbar = () => {
       </div>
       </div>
       <ul tabIndex={0} className="flex flex-col text-slate-600 justify-center z-[99] px-4 py-5 bg-slate-50 items-start font-semibold gap-y-5 menu menu-sm dropdown-content mt-3  p-2 shadow rounded-box w-40">
-      <Link to={'/'} className="hover:text-yellow-500">
+      <Link to={'/myaddedfood'} className="hover:text-yellow-500">
       My added food
       </Link>
-      <Link className='hover:text-yellow-500 ' to={'/'}>Add a food</Link>
-      <Link className='hover:text-yellow-500 ' to={'/'}>My orderd food</Link>
+      <Link className='hover:text-yellow-500 ' to={'/addfood'}>Add a food</Link>
+      <Link className='hover:text-yellow-500 ' to={'/myorderdfood'}>My orderd food</Link>
       <Link onClick={handleLogoutUser} className='hover:text-yellow-500'>Logout</Link>
       </ul>
       </div>

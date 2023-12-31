@@ -9,6 +9,9 @@ import PrivateRoutes from "./Providers/PrivateRoutes";
 import Home from "./components/Home/Home";
 import SingleFood from "./components/SingleFood/SingleFood";
 import Foodpurchase from "./components/Foodpurchase/Foodpurchase";
+import MyAddedFood from "./components/MyAddedFood/MyAddedFood";
+import Addfood from "./components/Addfood/Addfood";
+import Myorderdfood from "./components/Myorderdfood/Myorderdfood";
 
 const Routes = createBrowserRouter([
     {
@@ -39,6 +42,19 @@ const Routes = createBrowserRouter([
                 path: '/blog',
                 element: <PrivateRoutes><Blog></Blog></PrivateRoutes>
             },
+            {
+                path: '/myaddedfood',
+                element: <MyAddedFood></MyAddedFood>
+            },
+            {
+                path: '/addfood',
+                element: <Addfood></Addfood>
+            },
+            {
+                path: '/myorderdfood',
+                element: <Myorderdfood></Myorderdfood>,
+                loader: ()=> fetch('http://localhost:5000/api/v1/route/getorderdfood')
+            }
         ]
     },
     {
