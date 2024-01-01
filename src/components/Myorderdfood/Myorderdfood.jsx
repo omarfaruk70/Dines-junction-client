@@ -2,7 +2,6 @@ import { useLoaderData } from "react-router-dom";
 
 const Myorderdfood = () => {
   const orderdFood = useLoaderData();
-  console.log(orderdFood);
   return (
     <div>
       <div className="flex justify-center m-10 max-w-7xl mx-auto bg-base-300">
@@ -31,7 +30,7 @@ const Myorderdfood = () => {
                       <th>{food.foodPrice} $</th>
                       <th>{"jwt theke dibo"}</th>
                       <th>{food.foodOwner}</th>
-                      <th><button className="btn btn-circle text-white bg-red-500">X</button></th>
+                      <th><button onClick={()=> food._id} className="btn btn-circle text-white bg-red-500">X</button></th>
                   </tr>
                  ))
               }

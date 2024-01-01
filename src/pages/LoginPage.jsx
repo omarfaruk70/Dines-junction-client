@@ -4,14 +4,16 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import Navbar from "../Sections/Navbar";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import useAxios from "../hooks/useAxios";
  
 const LoginPage = () => {
-  const {loginUser} = useContext(AuthContext);
+  const {loginUser, logOutUser} = useContext(AuthContext);
   const navigate = useNavigate();
+  const axios = useAxios();
   const location = useLocation();
     const [showpassword, setSetshowpassword] = useState(false);
 
-    const handleLogin = (event) => {
+    const handleLogin = async(event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -36,22 +38,25 @@ const LoginPage = () => {
               text: "Don't Have a special charecter",
             });
         }
-        loginUser(email, password)
-        .then(() => {
+        try {
+          const user = await loginUser(email, password) ;
+          const res = await axios.post('/user/auth/jwt/access-token', {email: user.user.email});
+          if(res.data?.success){
+            Swal.fire({
+              icon: "success",
+              title: "Success",
+              text: "User Login successfull",
+            });
+            navigate(location?.state ? location.state : "/");
+          }
+        } catch (error) {
+          logOutUser();
           Swal.fire({
-            icon: "success",
-            title: "Success",
-            text: "User Login successfull",
-          });
-          navigate(location?.state ? location.state : "/");
-        })
-        .catch(error => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: error.message,
-          });
-        })
+                icon: "error",
+                title: "Oops...",
+                text: error.message,
+              });
+        }
     }
     return (
         <div>

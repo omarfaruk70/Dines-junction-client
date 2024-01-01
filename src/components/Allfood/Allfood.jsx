@@ -23,7 +23,6 @@ const Allfood = () => {
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
   const limitPerPage = 9;
-  console.log(query);
   
   const getServices = async () => {
     const res = await axios.get(`/route/getallfood/?page=${page}&limit=${limitPerPage}&origin=${origin}&sortField=price&sortOrder=${price}`);

@@ -9,7 +9,7 @@ const SingleFood = () => {
     foodCategory,
     price,
     madeBy,
-    foodOrigin,
+    origin,
     ingredients,
   } = singlefood;
   return (
@@ -31,7 +31,7 @@ const SingleFood = () => {
           </h4>
           <div className="flex justify-around text-xl mb-2">
             <p>Category: {foodCategory}</p>
-            <p>Origin: {foodOrigin}</p>
+            <p>Origin: {origin}</p>
             <p>Price: {price} $</p>
           </div>
           <p className="block font-sans text-base antialiased font-medium leading-relaxed  bg-clip-text bg-gradient-to-tr from-blue-gray-600 to-blue-gray-400">

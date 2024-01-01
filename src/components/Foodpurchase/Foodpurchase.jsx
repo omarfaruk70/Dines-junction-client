@@ -8,7 +8,6 @@ const Foodpurchase = () => {
   const {user} = useContext(AuthContext);
   const axios = useAxios() ;
   const data = useLoaderData();
-  console.log(data);
   const {foodName,price,quantity, madeBy, foodImage} = data;
   const handlefoodPurchase = (event) => {
     event.preventDefault();
