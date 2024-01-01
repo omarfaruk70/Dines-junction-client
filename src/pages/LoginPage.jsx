@@ -40,17 +40,19 @@ const LoginPage = () => {
         }
         try {
           const user = await loginUser(email, password) ;
-          const res = await axios.post('/user/auth/jwt/access-token', {email: user.user.email});
+          const res = await axios.post('/user/auth/jwt/access_token', {email: user.user.email});
           if(res.data?.success){
             Swal.fire({
               icon: "success",
               title: "Success",
-              text: "User Login successfull",
+              text: "User Login successful",
             });
             navigate(location?.state ? location.state : "/");
           }
+          else{
+           return logOutUser();
+          }
         } catch (error) {
-          logOutUser();
           Swal.fire({
                 icon: "error",
                 title: "Oops...",

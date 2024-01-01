@@ -52,8 +52,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/myorderdfood',
-                element: <Myorderdfood></Myorderdfood>,
-                loader: ()=> fetch('http://localhost:5000/api/v1/route/getorderdfood')
+                element: <PrivateRoutes><Myorderdfood></Myorderdfood></PrivateRoutes>,
             }
         ]
     },
