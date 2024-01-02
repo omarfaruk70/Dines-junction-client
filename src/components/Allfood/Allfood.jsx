@@ -39,11 +39,10 @@ const Allfood = () => {
   if(isError){
     return <div className="text-3xl font-bold flex justify-center items-center h-screen">Something went wrong {error}</div>
   }
+
   //  pagination functionality
-// const totalFoodItems = allfoodData?.data?.length || 0;
-const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
-
-
+const totalFoodItems = allfoodCount?.length || 0;
+const totalPage =  Math.ceil( totalFoodItems / limitPerPage);
  const handlePrev = () => {
   if(page > 1){
     setPage(page - 1);
@@ -92,7 +91,7 @@ const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
         </div>
         <div>
           <h2 className="text-xl font-bold text-center">Origin</h2>
-          <select onChange={(e) => setOrigin(e.target.value)} defaultValue={'DEFAULT'} id="">
+          <select onChange={(e) =>setOrigin(e.target.value)} defaultValue={'DEFAULT'} id="">
         <option disabled value={'DEFAULT'}>Choose One</option>
          {
            allorigin.map((singleOrigin) => <option key={singleOrigin} value={singleOrigin}>{singleOrigin}</option>)
@@ -101,13 +100,13 @@ const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2 md:px-4">
-        {allfoodData?.data.map((food) => (
+        {allfoodData?.data?.filter((data)=>data.foodName.includes(query)).map((food) => (
           <FoodsCard key={food._id} food={food}></FoodsCard>
         ))}
       </div>
       <div className="mt-6 flex justify-center">
        <div className=" border-amber-400 rounded-lg px-3 py-2 border-2 flex gap-1">
-       <button onClick={handlePrev} className="btn btn-circle"><FaArrowLeftLong /></button>
+       <button onClick={handlePrev} className={page <= 1 ? 'btn btn-circle btn-disabled' : 'btn btn-circle'}><FaArrowLeftLong /></button>
        <div>
        {
         Array(totalPage).fill(0).map((item, i) => {
@@ -121,7 +120,7 @@ const totalPage =  Math.ceil( allfoodCount?.length / limitPerPage);
         } )
        }
        </div>
-       <button onClick={handleNext} className="btn btn-circle"><FaArrowRightLong /></button>
+       <button onClick={handleNext} className={page >= totalPage ? 'btn btn-circle btn-disabled' : 'btn btn-circle'}><FaArrowRightLong /></button>
        </div>
       </div>
     </div>
