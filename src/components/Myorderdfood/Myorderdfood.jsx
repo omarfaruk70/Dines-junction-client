@@ -21,7 +21,6 @@ const Myorderdfood = () => {
     mutationKey: ['OrderdFood'],
     mutationFn: (id) => {
       const res = axios.delete(`/user/deletefood/${id}`);
-      console.log(res);
       return res;
     },
     onSuccess: () => {
