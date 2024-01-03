@@ -1,20 +1,34 @@
 import useAxios from "../../hooks/useAxios";
 import { TbListDetails } from "react-icons/tb";
+import { MdDelete } from "react-icons/md";
 
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
+import { Link } from "react-router-dom";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 const MyAddedFood = () => {
-  const [addedFood, setAddedFood] = useState([]);
   const axios = useAxios();
   const { user } = useContext(AuthContext);
   const queryEmail = user?.email;
-  useEffect(()=> {
-    axios.get(`/route/myaddedfood?email=${queryEmail}`)
-  .then((res) => {
-    setAddedFood(res);
+  const queryClient = useQueryClient();
+  const { data: addedFood } = useQuery({
+    queryKey: ["addedFood"],
+    queryFn: () => {
+      const res = axios.get(`/route/myaddedfood?email=${queryEmail}`);
+      return res;
+    },
   });
-  }, [])
+  const { mutate } = useMutation({
+    mutationKey: ["AddedFood"],
+    mutationFn: (id) => {
+      const res = axios.delete(`/route/myaddedfood/${id}`);
+      return res;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["addedFood"] });
+    },
+  });
   return (
     <div>
       <h2 className="text-3xl text-center mt-2">
@@ -33,7 +47,8 @@ const MyAddedFood = () => {
                   <th>Price</th>
                   <th>Imported From</th>
                   <th>Food Owner</th>
-                  <th>Action</th>
+                  <th>Details</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -52,10 +67,18 @@ const MyAddedFood = () => {
                     <th>{food.origin}</th>
                     <th>{food.addedBy}</th>
                     <th>
+                      <Link to={`/updatemyaddedfood/${food._id}`}>
+                        <button className="btn btn-circle text-white bg-blue-500 hover:bg-blue-700">
+                          <TbListDetails className="text-2xl" />
+                        </button>
+                      </Link>
+                    </th>
+                    <th>
                       <button
-                        className="btn btn-circle text-white bg-blue-500 hover:bg-blue-700"
+                        onClick={() => mutate(food._id)}
+                        className="btn btn-circle text-white bg-red-500 hover:bg-amber-700"
                       >
-                        <TbListDetails />
+                        <MdDelete className="text-2xl" />
                       </button>
                     </th>
                   </tr>
