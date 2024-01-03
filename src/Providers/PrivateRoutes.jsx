@@ -9,7 +9,7 @@ const PrivateRoutes = ({children}) => {
     if (loading) {
         return (
           <div className="flex flex-col justify-center items-center h-screen">
-          <span className="loading bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90 w-10 md:w-20 lg:w-32"></span>
+          <span className="loading bg-gradient-to-r from-amber-500 from-10% via-yellow-500 via-30% to-amber-400 to-90 w-10 md:w-20 lg:w-32"></span>
           ;
         </div>
         );

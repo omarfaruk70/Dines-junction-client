@@ -35,7 +35,8 @@ const Myorderdfood = () => {
 
   return (
     <div>
-      <div className="flex justify-center m-10 max-w-7xl mx-auto bg-base-300">
+      <h2 className="text-3xl font-bold mt-2 text-center">You have Orderd those item</h2>
+      <div className="flex justify-center m-5 max-w-7xl mx-auto bg-base-300">
         {orderdFood?.data?.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="table">
@@ -69,7 +70,7 @@ const Myorderdfood = () => {
                     <th>
                       <button
                         onClick={() => mutate(food?._id)}
-                        className="btn btn-circle text-white bg-red-500"
+                        className="btn btn-circle text-white bg-red-400 hover:bg-red-600"
                       >
                         X
                       </button>

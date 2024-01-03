@@ -43,9 +43,11 @@ const LoginPage = () => {
           const res = await axios.post('/user/auth/jwt/access_token', {email: user.user.email});
           if(res.data?.success){
             Swal.fire({
+              position: "top-end",
               icon: "success",
-              title: "Success",
-              text: "User Login successful",
+              title: "User Logged in",
+              showConfirmButton: false,
+              timer: 1500,
             });
             navigate(location?.state ? location.state : "/");
           }
