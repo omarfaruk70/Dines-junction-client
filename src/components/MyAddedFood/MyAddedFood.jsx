@@ -71,7 +71,7 @@ const MyAddedFood = () => {
                     <th>{food.foodName}</th>
                     <th>{food.price} $</th>
                     <th>{food.origin}</th>
-                    <th>{food.addedBy}</th>
+                    <th>{food.madeBy}</th>
                     <th>
                       <Link to={`/updatemyaddedfood/${food._id}`}>
                         <button className="btn btn-circle text-white bg-blue-500 hover:bg-blue-700">

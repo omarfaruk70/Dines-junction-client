@@ -32,7 +32,6 @@ const Myorderdfood = () => {
       queryClient.invalidateQueries({queryKey: ['OrderdFood']})
     }
   })
-
   return (
     <div>
       <div className="flex justify-center m-5 max-w-7xl mx-auto bg-base-300">
@@ -47,7 +46,8 @@ const Myorderdfood = () => {
                   <th>Img</th>
                   <th>Food Name</th>
                   <th>Price</th>
-                  <th>Added Time</th>
+                  <th>Orderd Date</th>
+                  <th>Orderd Time</th>
                   <th>Food Owner</th>
                   <th>Action</th>
                 </tr>
@@ -65,8 +65,9 @@ const Myorderdfood = () => {
                     </th>
                     <th>{food.foodName}</th>
                     <th>{food.foodPrice} $</th>
-                    <th>{"jwt theke dibo"}</th>
-                    <th>{food.foodOwner}</th>
+                    <th>{food.buyingDate}</th>
+                    <th>{food.buyingTime}</th>
+                    <th>{food.buyerName}</th>
                     <th>
                       <button
                         onClick={() => mutate(food?._id)}

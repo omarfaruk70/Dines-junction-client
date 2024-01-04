@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateMyaddedFood = () => {
   const data = useLoaderData();
-  console.log(data);
   const axios = useAxios();
   const handleUpdateFood = (event) => {
     event.preventDefault();
@@ -25,7 +24,6 @@ const UpdateMyaddedFood = () => {
       quantity,
       ingredients,
     };
-    console.log(updateFoodInfo);
        axios.put(`/user/updatefoodinfo/${data._id}`, updateFoodInfo)
        .then(res =>{
         if(res?.data?.modifiedCount){

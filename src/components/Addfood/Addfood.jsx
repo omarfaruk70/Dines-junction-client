@@ -12,13 +12,13 @@ const Addfood = () => {
       const foodName = form.foodName.value;
       const foodImage = form.photourl.value;
       const origin = form.foodorigin.value;
-      const addedBy = form.addedBy.value;
+      const madeBy = form.addedBy.value;
       const email = form.email.value;
       const foodCategory = form.foodCategory_name.value;
       const price = form.foodprice.value;
       const quantity = form.foodquantity.value;
       const ingredients = form.description.value;
-      const addedFoodInfo = { foodName, foodImage, origin, addedBy, email,foodCategory, price, quantity, ingredients };
+      const addedFoodInfo = { foodName, foodImage, origin, madeBy, email,foodCategory, price, quantity, ingredients };
        axios.post('/user/addfood', addedFoodInfo)
        .then(res =>{
         if(res?.data?.insertedId){
