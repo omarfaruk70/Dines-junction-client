@@ -15,7 +15,6 @@ const SingleFood = () => {
     origin,
     ingredients,
   } = singlefood;
-  console.log(user?.email);
   return (
     <div className="md:px-3">
       <h2 className="text-4xl text-center py-5">

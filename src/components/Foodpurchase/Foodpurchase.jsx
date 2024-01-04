@@ -8,12 +8,12 @@ const Foodpurchase = () => {
   const { user } = useContext(AuthContext);
   const axios = useAxios();
   const data = useLoaderData();
-  console.log(data);
   const { foodName, price, quantity, foodImage } = data;
   const  today  = new Date();
   var options = { year: 'numeric', month: 'long', day: 'numeric' };
   
   const todaysDate = today.toLocaleDateString("en-US", options);
+  let orderCount = 0 ;
   const handlefoodPurchase = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -25,6 +25,15 @@ const Foodpurchase = () => {
     const buyerEmail = form.buyer_email.value;
     const buyingDate = form.buying_date.value;
     const buyingTime = form.buying_time.value;
+    orderCount ++ ;
+    console.log(orderCount);
+    if(orderCount > foodQuantity){
+      return Swal.fire({
+        icon: "error",
+        title: "Failed",
+        text: "You can not Order more then available Food",
+      });
+    }
     const purchaseFood = {
       foodName,
       foodImage,
@@ -34,6 +43,7 @@ const Foodpurchase = () => {
       buyerEmail,
       buyingDate,
       buyingTime,
+      orderCount
     };
     if (foodPrice && foodQuantity < 1) {
       return Swal.fire({
