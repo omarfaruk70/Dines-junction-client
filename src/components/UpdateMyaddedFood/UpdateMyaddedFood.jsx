@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAxios from "../../hooks/useAxios";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UpdateMyaddedFood = () => {
   const data = useLoaderData();
@@ -38,6 +39,9 @@ const UpdateMyaddedFood = () => {
 
   return (
     <div className="max-w-5xl space-y-4 m-2 text-2xl font-bold mx-auto">
+       <Helmet>
+        <title>Dines-Junction | Profile-updateFood </title>
+       </Helmet>
       <h2 className="text-center">Update food info</h2>
       <form
         onSubmit={handleUpdateFood}

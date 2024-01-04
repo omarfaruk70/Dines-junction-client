@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import useAxios from "../../hooks/useAxios";
+import { Helmet } from "react-helmet-async";
 
 const Addfood = () => {
     const {user} = useContext(AuthContext);
@@ -13,12 +14,11 @@ const Addfood = () => {
       const foodImage = form.photourl.value;
       const origin = form.foodorigin.value;
       const madeBy = form.addedBy.value;
-      const email = form.email.value;
       const foodCategory = form.foodCategory_name.value;
       const price = form.foodprice.value;
       const quantity = form.foodquantity.value;
       const ingredients = form.description.value;
-      const addedFoodInfo = { foodName, foodImage, origin, madeBy, email,foodCategory, price, quantity, ingredients };
+      const addedFoodInfo = { foodName, foodImage, origin, madeBy,foodCategory, price, quantity, ingredients, userEmail: user?.email };
        axios.post('/user/addfood', addedFoodInfo)
        .then(res =>{
         if(res?.data?.insertedId){
@@ -33,6 +33,9 @@ const Addfood = () => {
 
   return (
     <div className="max-w-5xl space-y-4 m-2 text-2xl font-bold mx-auto">
+       <Helmet>
+        <title>Dines-Junction | Profile-AddFood </title>
+       </Helmet>
       <h2 className="text-center">Add A New Food item</h2>
       <form
         onSubmit={handleAddFood}
@@ -92,7 +95,7 @@ const Addfood = () => {
             name="addedBy"
             id="floating_addedBy"
             defaultValue={user?.displayName}
-            disabled
+            readOnly
             className="block py-2.5 px-0 w-full text-sm text-slate-600 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
@@ -104,14 +107,12 @@ const Addfood = () => {
             Added By
           </label>
         </div>
-        <div className="relative z-0 w-full mb-5 group">
+        {/* <div className="relative z-0 w-full mb-5 group">
           <input
             type="email"
             name="email"
-            defaultValue={user?.email}
             id="floating_email"
             className="block py-2.5 px-0 w-full text-sm text-slate-600 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            disabled
             placeholder=" "
             required
           />
@@ -121,7 +122,7 @@ const Addfood = () => {
           >
             Email
           </label>
-        </div>
+        </div> */}
         <div className="relative z-0 w-full mb-5 group">
           <input
             type="text"

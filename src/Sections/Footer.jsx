@@ -47,7 +47,7 @@ const Footer = () => {
         </aside>
         <div className="flex items-center flex-col">
            <p className="text-lg border-2 border-b-black"> “Delicious Moments Await - Explore, Savor, and Celebrate the World of Food with Us“</p>
-           <p>Copyright © 2023 - All right reserved by <span className="font-bold">Omar Faruk</span></p>
+           <p>Copyright © 2024 - All right reserved by <span className="font-bold">Omar Faruk</span></p>
         </div>
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">

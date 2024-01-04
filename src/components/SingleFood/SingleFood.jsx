@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const SingleFood = () => {
+  const {user} = useContext(AuthContext);
   const singlefood = useLoaderData();
   const {
     _id,
@@ -12,6 +15,7 @@ const SingleFood = () => {
     origin,
     ingredients,
   } = singlefood;
+  console.log(user?.email);
   return (
     <div className="md:px-3">
       <h2 className="text-4xl text-center py-5">
@@ -39,9 +43,16 @@ const SingleFood = () => {
           </p>
           <p className="text-xl">Made by: <span className="font-bold">{madeBy}</span></p>
         </div>
-        <Link to={`/foodpurchase/fooditem/${_id}`} className="btn mx-5 md:mx-16  bg-amber-500 hover:bg-amber-600 text-white my-2">
+       {
+        user?.email == singlefood.userEmail ?
+        <Link to={'/addfood'} className="btn mx-5 md:mx-16  bg-slate-500 hover:bg-amber-600 text-white my-2 disabled">
+        <button>Add More</button>
+        </Link>  
+        :
+         <Link to={`/foodpurchase/fooditem/${_id}`} className="btn mx-5 md:mx-16  bg-amber-500 hover:bg-amber-600 text-white my-2">
          <button>Order Now</button>  
          </Link>
+         }
       </div>
     </div>
   );

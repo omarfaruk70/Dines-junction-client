@@ -8,6 +8,7 @@ const Foodpurchase = () => {
   const { user } = useContext(AuthContext);
   const axios = useAxios();
   const data = useLoaderData();
+  console.log(data);
   const { foodName, price, quantity, foodImage } = data;
   const  today  = new Date();
   var options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -38,7 +39,7 @@ const Foodpurchase = () => {
       return Swal.fire({
         icon: "error",
         title: "Failed",
-        text: "You can not buy that item because that item is not available!",
+        text: "Sorry 😒 This item is not available!",
       });
     } else {
       axios.post("/user/purchasefood", purchaseFood).then((data) => {

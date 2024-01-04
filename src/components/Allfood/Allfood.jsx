@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxios from "../../hooks/useAxios";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Allfood = () => {
   const allfoodCount = useLoaderData();
@@ -56,6 +57,9 @@ const totalPage =  Math.ceil( totalFoodItems / limitPerPage);
  }
   return (
     <div className="max-w-7xl mx-auto py-3 mb-5">
+       <Helmet>
+       <title>Dines-Junction | All Food </title>
+       </Helmet>
       <h2 className="text-3xl font-bold text-center">Our Available foods</h2>
       <div className="bg-yellow-600 border-t-[4px] rounded-full border-yellow-500 mb-4 max-w-[200px] mx-auto"></div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-4 items-center border-2 rounded-2xl py-3 border-yellow-300 mb-3">

@@ -5,7 +5,7 @@ const FoodsCard = ({food}) => {
     return (
         <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
         <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
-          <img className='h-full w-full'
+          <img className='h-full w-full object-cover'
             src={foodImage}
             alt="profile-picture"
           />

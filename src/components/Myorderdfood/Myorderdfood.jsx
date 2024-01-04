@@ -3,6 +3,7 @@ import useAxios from "../../hooks/useAxios";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Myorderdfood = () => {
   const axios = useAxios();
@@ -35,6 +36,9 @@ const Myorderdfood = () => {
   return (
     <div>
       <div className="flex justify-center m-5 max-w-7xl mx-auto bg-base-300">
+      <Helmet>
+       <title>Dines-Junction | Profile-MyorderdFood </title>
+       </Helmet>
         {orderdFood?.data?.length > 0 ? (
           <div className="overflow-x-auto">
             <h2 className="text-3xl font-bold mt-2 mb-5 text-center">You have Orderd those item</h2>

@@ -7,6 +7,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { Link } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyAddedFood = () => {
   const axios = useAxios();
@@ -37,6 +38,9 @@ const MyAddedFood = () => {
   });
   return (
     <div>
+       <Helmet>
+        <title>Dines-Junction | Profile-AddedFood </title>
+        </Helmet>
       <div className="flex justify-center m-10 max-w-7xl mx-auto bg-base-300">
         {addedFood?.data?.length > 0 ? (
           <div className="overflow-x-auto">
