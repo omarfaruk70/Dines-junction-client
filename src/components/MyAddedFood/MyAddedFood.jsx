@@ -2,10 +2,11 @@ import useAxios from "../../hooks/useAxios";
 import { TbListDetails } from "react-icons/tb";
 import { MdDelete } from "react-icons/md";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { Link } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import Swal from "sweetalert2";
 
 const MyAddedFood = () => {
   const axios = useAxios();
@@ -26,17 +27,22 @@ const MyAddedFood = () => {
       return res;
     },
     onSuccess: () => {
+      Swal.fire({
+        title: "Done!",
+        text: "You Have canceled your added food!",
+        icon: "success"
+      });
       queryClient.invalidateQueries({ queryKey: ["addedFood"] });
     },
   });
   return (
     <div>
-      <h2 className="text-3xl text-center mt-2">
-        Recently You Added those food item
-      </h2>
       <div className="flex justify-center m-10 max-w-7xl mx-auto bg-base-300">
         {addedFood?.data?.length > 0 ? (
           <div className="overflow-x-auto">
+            {/* <h2 className="text-3xl text-center mt-2 mb-5">
+              Recently You Added those food item
+            </h2> */}
             <table className="table">
               {/* head */}
               <thead>

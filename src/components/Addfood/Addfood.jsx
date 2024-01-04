@@ -18,8 +18,8 @@ const Addfood = () => {
       const price = form.foodprice.value;
       const quantity = form.foodquantity.value;
       const ingredients = form.description.value;
-      const addCarinfo = { foodName, foodImage, origin, addedBy, email,foodCategory, price, quantity, ingredients };
-       axios.post('/user/addfood', addCarinfo)
+      const addedFoodInfo = { foodName, foodImage, origin, addedBy, email,foodCategory, price, quantity, ingredients };
+       axios.post('/user/addfood', addedFoodInfo)
        .then(res =>{
         if(res?.data?.insertedId){
             Swal.fire({
