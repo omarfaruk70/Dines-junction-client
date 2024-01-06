@@ -12,7 +12,7 @@ const TopFood = () => {
     }
   })  
 return (
-        <div>
+        <div className="mb-5">
             <h2 className="text-5xl font-bold text-center mb-5">Top Foods we found for you.</h2>    
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2 md:px-4">
         {topFood?.data?.map((food) => (
