@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import OurChefs from "../OurChefs/OurChefs";
 import Services from "../Services/Services";
+import TopFood from "../TopFood/TopFood";
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
                 <title>Dines-Junction | Home </title>
             </Helmet>
             <Banner></Banner>
+            <TopFood></TopFood>
             <Services></Services>
             <OurChefs></OurChefs>
         </div>
