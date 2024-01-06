@@ -12,6 +12,7 @@ const TopFood = () => {
     }
   })  
 return (
+  <div>
         <div className="mb-5">
             <h2 className="text-5xl font-bold text-center mb-5">Top Foods we found for you.</h2>    
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2 md:px-4">
@@ -37,7 +38,11 @@ return (
          </div>
        </div>
         ))}
-        </div>       
+        </div>  
+        </div>
+        <Link className="btn btn-block max-w-[150px] mb-8 mx-auto flex justify-center items-center mt-4 bg-amber-500 hover:bg-amber-600 text-white" to={'/allfood'}>
+        <button>See All</button>     
+        </Link>
         </div>
     );
 };

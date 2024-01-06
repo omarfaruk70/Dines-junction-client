@@ -27,17 +27,17 @@ const Routes = createBrowserRouter([
             {
                 path: '/allfood',
                 element: <Allfood></Allfood>,
-                loader: () => fetch(' https://dines-junction-server-c6h0qon63-omar-faruks-projects.vercel.app/api/v1/route/getallfood')
+                loader: () => fetch('https://dines-junction-server.vercel.app/api/v1/route/getallfood')
             },
             {
                 path: '/allfood/singlefood/:id',
                 element: <SingleFood></SingleFood>,
-                loader: ({params}) => fetch(` https://dines-junction-server-c6h0qon63-omar-faruks-projects.vercel.app/api/v1/route/getallfood/singlefood/${params.id}`)
+                loader: ({params}) => fetch(`https://dines-junction-server.vercel.app/api/v1/route/getallfood/singlefood/${params.id}`)
             },
             {
                 path: '/foodpurchase/fooditem/:id',
                 element: <PrivateRoutes> <Foodpurchase></Foodpurchase></PrivateRoutes>,
-                loader: ({params}) =>fetch(` https://dines-junction-server-c6h0qon63-omar-faruks-projects.vercel.app/api/v1/route/getallfood/fooditem/${params.id}`)
+                loader: ({params}) =>fetch(`https://dines-junction-server.vercel.app/api/v1/route/getallfood/fooditem/${params.id}`)
             },
             {
                 path: '/blog',
@@ -50,7 +50,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/updatemyaddedfood/:id',
                 element: <PrivateRoutes><UpdateMyaddedFood></UpdateMyaddedFood></PrivateRoutes>,
-                loader: ({params})=> fetch(` https://dines-junction-server-c6h0qon63-omar-faruks-projects.vercel.app/api/v1/route/myaddedfood/${params.id}`)
+                loader: ({params})=> fetch(`https://dines-junction-server.vercel.app/api/v1/route/myaddedfood/${params.id}`)
             },
             {
                 path: '/addfood',
